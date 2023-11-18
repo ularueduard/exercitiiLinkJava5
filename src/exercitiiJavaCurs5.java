@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class exercitiiJavaCurs5 {
     public static void main(String[] args) {
         //1.Sa se afiseze urmatorul pattern pe ecran, fara a folosi in mod repetat instructiunea System.out.println():
@@ -155,8 +157,128 @@ public class exercitiiJavaCurs5 {
 
         // 12.Determină și afișează cel mai mare numar dintre două numere citite de la tastatură.
 
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Introdu primul numar");
+//        int myFirstNumber = scanner.nextInt();
+//        System.out.println("Introdu al doilea numar");
+//        int mySecondNumber = scanner.nextInt();
+//
+//        if(myFirstNumber > mySecondNumber){
+//            System.out.println(myFirstNumber);
+//        }else {
+//            System.out.println(mySecondNumber);
+//        }
+//
+
+        //13.Sa se realizeze un program care citeste de la tastatura 3 numere si afiseaza urmatoarele rezultate:
+        //a+b+c
+        //2*a + 3*b+4*c
+        //(a+b)/c =>(sa fie afisat ca si double )
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Introdu un numar a :");
+//        int a = scanner.nextInt();
+//        System.out.println("Introdu un numar b :");
+//        int b = scanner.nextInt();
+//        System.out.println("Introdu un numar c :");
+//        int c = scanner.nextInt();
+//
+//        int sum = a + b + c;
+//        System.out.println("Valoarea lui a + b + c este: " + sum);
+//
+//        int subExercitiu2 = 2*a + 3*b + 4*c;
+//        System.out.println("Valoarea lui 2*a+3*b+4*c este :"+ subExercitiu2);
+//
+//        double subExercitiu3 =(a +  b) / (double) c;
+//        System.out.println("Valoarea lui (a+b)/c este:"+subExercitiu3);
+
+        //14.Avand 2 numere intregi, sa se afiseze suma acestora. Suma in intervalul [10,19] inclusiv, nu trebuie afisata, se va afisa 20.
+        //Suma(3,4) -> 7
+        //Suma(9,4) -> 20
+        //Suma(10,11)-> 21
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Introdu un numar a :");
+//        int a = scanner.nextInt();
+//        System.out.println("Introdu un numar b :");
+//        int b = scanner.nextInt();
+//
+//        int sum = a + b;
+//
+//        if(sum < 10 || sum > 20){
+//            System.out.println(sum);
+//        } else if (sum >= 10 || sum <=19){
+//            System.out.println(20);
+//        }
+
+        //Avand 2 numere intregi, a si b, sa se returneze true daca numerele, suma sau diferenta acestora este egala cu 6, si false in celalalte cazuri.
+        //Calcul(6, 4) -> true
+        //Calcul(4, 5) -> false
+        //Calcul(1, 5) -> true
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Introdu un numar a :");
+//        int a = scanner.nextInt();
+//        System.out.println("Introdu un numar b :");
+//        int b = scanner.nextInt();
+//
+//        if(a == 6 || b==6 || a+b == 6 || a-b == 6){
+//            System.out.println("True");
+//        }else {
+//            System.out.println("False");
+//        }
+
+//16.Sa se realizeze un program pentru a implementa jocul "Ghicirea numarului".
+// Programul va detine intr-o variabila un numar cuprins intre 0 si 100. Utilizatorul este rugat sa introduca de la tastatura
+// numere in mod repetitiv pana cand reuseste sa ghiceasca numarul.
+//        int randomNumber = ThreadLocalRandom.current().nextInt(0,99+1);
+//        System.out.println("My magic Number is "+randomNumber);
+//        Scanner scanner = new Scanner(System.in);
+//        boolean youWin = true;
+//        do {
+//            System.out.println("Introdu numarul magic:");
+//            int guessNumber = scanner.nextInt();
+//            if(guessNumber == randomNumber){
+//                System.out.println("You guessed!!");
+//                youWin = false;
+//            }
+//        }while (youWin);
+
+
+    //17.Scrieți un program care să calculeze și să afișeze cel mai mare divizor comun al două numere(numerele se pot citi de la tastatura0
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introdu primul numar");
+        int myFirstNumber = scanner.nextInt();
+        System.out.println("Introdu al doilea numar");
+        int mySecondNumber = scanner.nextInt();
+
+        if(myFirstNumber == 0){
+            System.out.println("The greatesc common divisor of"+myFirstNumber + " and "+ mySecondNumber+ "is"+ mySecondNumber);
+        }else if (mySecondNumber == 0){
+            System.out.println("The greatesc common divisor of"+myFirstNumber + " and "+ mySecondNumber+ "is"+ myFirstNumber);
         }
+        int bigNumber = 0;
+        int smallNumber = 0;
+        if(myFirstNumber>mySecondNumber){
+            bigNumber = myFirstNumber;
+            smallNumber=mySecondNumber;
+        }else{
+            bigNumber = mySecondNumber;
+            smallNumber=myFirstNumber;
         }
+
+        while(mySecondNumber != 0){
+            int temp = mySecondNumber;
+            mySecondNumber = myFirstNumber % mySecondNumber;
+            myFirstNumber = temp;
+        }
+        System.out.println(myFirstNumber);
+
+        }
+
+        }
+
+
+
 
 
 
