@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class exercitiiJavaCurs5 {
     public static void main(String[] args) {
         //1.Sa se afiseze urmatorul pattern pe ecran, fara a folosi in mod repetat instructiunea System.out.println():
@@ -230,7 +228,9 @@ public class exercitiiJavaCurs5 {
 //16.Sa se realizeze un program pentru a implementa jocul "Ghicirea numarului".
 // Programul va detine intr-o variabila un numar cuprins intre 0 si 100. Utilizatorul este rugat sa introduca de la tastatura
 // numere in mod repetitiv pana cand reuseste sa ghiceasca numarul.
-//        int randomNumber = ThreadLocalRandom.current().nextInt(0,99+1);
+//
+//        Random rand = new Random();
+//        int randomNumber = rand.nextInt(100);
 //        System.out.println("My magic Number is "+randomNumber);
 //        Scanner scanner = new Scanner(System.in);
 //        boolean youWin = true;
@@ -245,33 +245,24 @@ public class exercitiiJavaCurs5 {
 
 
     //17.Scrieți un program care să calculeze și să afișeze cel mai mare divizor comun al două numere(numerele se pot citi de la tastatura0
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Introdu primul numar");
-        int myFirstNumber = scanner.nextInt();
-        System.out.println("Introdu al doilea numar");
-        int mySecondNumber = scanner.nextInt();
-
-        if(myFirstNumber == 0){
-            System.out.println("The greatesc common divisor of"+myFirstNumber + " and "+ mySecondNumber+ "is"+ mySecondNumber);
-        }else if (mySecondNumber == 0){
-            System.out.println("The greatesc common divisor of"+myFirstNumber + " and "+ mySecondNumber+ "is"+ myFirstNumber);
-        }
-        int bigNumber = 0;
-        int smallNumber = 0;
-        if(myFirstNumber>mySecondNumber){
-            bigNumber = myFirstNumber;
-            smallNumber=mySecondNumber;
-        }else{
-            bigNumber = mySecondNumber;
-            smallNumber=myFirstNumber;
-        }
-
-        while(mySecondNumber != 0){
-            int temp = mySecondNumber;
-            mySecondNumber = myFirstNumber % mySecondNumber;
-            myFirstNumber = temp;
-        }
-        System.out.println(myFirstNumber);
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Introdu primul numar");
+//        int myFirstNumber = scanner.nextInt();
+//        System.out.println("Introdu al doilea numar");
+//        int mySecondNumber = scanner.nextInt();
+//
+//        if(myFirstNumber == 0){
+//            System.out.println("The greatesc common divisor of"+myFirstNumber + " and "+ mySecondNumber+ "is"+ mySecondNumber);
+//        }else if (mySecondNumber == 0){
+//            System.out.println("The greatesc common divisor of"+myFirstNumber + " and "+ mySecondNumber+ "is"+ myFirstNumber);
+//        }
+//
+//        while(mySecondNumber != 0){
+//            int temp = mySecondNumber;
+//            mySecondNumber = myFirstNumber % mySecondNumber;
+//            myFirstNumber = temp;
+//        }
+//        System.out.println(myFirstNumber);
 
         }
 
